@@ -20,12 +20,13 @@ class TodoForm extends Component {
 	}
 	render() {
 		return (
-			<form onSubmit={this.submitHandler.bind(this)}>
-				<input  className="form-control col-md-12" 
+			<form className="form-inline" onSubmit={this.submitHandler.bind(this)}>
+				<input  className="form-control" 
 					    value={this.state.input}
 					    onChange={this.changeHandler.bind(this)} 
 						placeholder="Type in your task"
 				/>
+				<button className="btn btn-default" type="submit">Add</button>
 			</form>
 		);
 	}
