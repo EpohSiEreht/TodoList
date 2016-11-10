@@ -10,8 +10,10 @@ class TodoForm extends Component {
 	}
 	submitHandler(e) {
 		e.preventDefault();
-		this.props.addTodo(this.state.input);
-		this.state.input = '';
+		if (this.state.input !== '') {
+			this.props.addTodo(this.state.input);
+			this.state.input = '';
+		}
 	}
 	changeHandler(e) {
 		this.setState({ input: e.target.value });
