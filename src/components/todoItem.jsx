@@ -6,7 +6,7 @@ class TodoItem extends Component {
 	}
 	render() {
 		return (
-			<a href="#" className="thumbnaills" onClick={this.clickHandler.bind(this)}>
+			<a href="#" className="thumbnail" onClick={this.clickHandler.bind(this)}>
 				{this.props.todo.text}
 			</a>
 		);
