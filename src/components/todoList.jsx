@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Todo from '../components/todo.jsx';
+import Todo from './todoItem.jsx';
 
 class TodoList extends Component {
 	render() {
@@ -10,7 +10,7 @@ class TodoList extends Component {
 			);
 		});
 		return (
-			<div className="list-group">{todoNode}</div>
+			<div className="col-xs-12">{todoNode}</div>
 		);
 	}
 }

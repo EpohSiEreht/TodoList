@@ -8,16 +8,22 @@ class TodoForm extends Component {
 			input: ''
 		}
 	}
+	submitHandler(e) {
+		e.preventDefault();
+		this.props.addTodo(this.state.input);
+		this.state.input = '';
+	}
+	changeHandler(e) {
+		this.setState({ input: e.target.value });
+	}
 	render() {
 		return (
-			<form onSubmit={(e) => {
-				e.preventDefault();
-				this.props.addTodo(this.state.input.value);
-				this.state.input.value = '';
-			}}>
-				<input className="form-control col-md-12" ref={node => {
-					this.state.input = node;
-				}} />
+			<form onSubmit={this.submitHandler.bind(this)}>
+				<input  className="form-control col-md-12" 
+					    value={this.state.input}
+					    onChange={this.changeHandler.bind(this)} 
+						placeholder="Type in your task"
+				/>
 			</form>
 		);
 	}

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Title from '../components/title.jsx';
-import TodoForm from '../components/todoForm.jsx';
-import TodoList from '../components/todoList.jsx';
+import Title from './title.jsx';
+import TodoForm from './todoForm.jsx';
+import TodoList from './todoList.jsx';
 
 class TodoApp extends Component {
 	constructor(props) {
